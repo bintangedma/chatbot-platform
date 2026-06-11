@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "chatbot-platform-backend"
+version = "0.1.0"
+description = "FastAPI backend for Chatbot Platform"
+authors = ["Senior Full-stack Engineer"]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
