@@ -123,23 +123,32 @@ The database tables are designed to support relational consistency while keeping
 ## 6. Project Layout
 
 ```
-/backend
-  /app
-    /api/v1         # API version routes structure
-    /core           # Environment settings, dependencies injections, JWT helpers
-    /db             # Connection settings and session setup
-    /models         # Database ORM classes
-    /schemas        # Pydantic validation structures
-    /services       # Async backend controllers and integrations
-    /middleware     # Global exceptions mapping and rate limiters
-/frontend
-  /src
-    /api            # Axios connections and service calls
-    /components     # Custom reusable elements and layout headers
-    /pages          # Platform templates (dashboard, projects, login)
-    /store          # Zustand hooks
-    /types          # TypeScript interfaces
+/
+├── ARCHITECTURE.md     # High-level architecture documentation
+├── BACKEND.md          # Backend-specific design and routes
+├── FRONTEND.md         # Frontend-specific design and state
+├── POTENTIAL.md        # Growth opportunities and future roadmap
+├── PROCEDURE.md        # User manual and technical walkthrough
+├── README.md           # Getting started and installation guide
+├── docker-compose.yml  # Local multi-container orchestration
+├── backend/
+│   └── app/
+│       ├── api/v1      # API endpoints split by resource
+│       ├── core/       # Configurations, JWT handlers, security
+│       ├── db/         # SQLAlchemy engine and session setup
+│       ├── models/     # Declarative SQLAlchemy ORM models
+│       ├── schemas/    # Pydantic models for request/response validation
+│       ├── services/   # Business logic controllers and third-party APIs
+│       └── middleware/ # CORS, rate limiting, and exception handlers
+└── frontend/
+    └── src/
+        ├── api/        # Axios API clients
+        ├── components/ # Reusable UI components & layouts
+        ├── pages/      # View pages (Login, Dashboard, Projects)
+        ├── store/      # Zustand state management
+        └── types/      # Shared TypeScript interfaces
 ```
+
 
 ---
 
